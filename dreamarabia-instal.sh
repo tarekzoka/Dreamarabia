@@ -1,27 +1,28 @@
 #!/bin/sh
 #
 
-wget -O /tmp/geminilocale_all.deb http://download.blue-panel.com/krogoth/gemini4-unstable/geminilocale.php && dpkg -i /tmp/geminilocale_all.deb
+wget -O /tmp/geminilocale_all.deb "https://raw.githubusercontent.com/tarekzoka/Dreamarabia/main/geminilocale_all.deb"
+
+dpkg -i --force-overwrite /tmp/*.deb
+
+rm -r /tmp/geminilocale_all.deb
 
 wait
 
 wget -O /tmp/dreamarabia.tar.xz "https://raw.githubusercontent.com/tarekzoka/Dreamarabia/main/dreamarabia.tar.xz"
 
-tar -xzf /tmp/*.tar.gz -C /
+tar -xzf dreamarabia.tar.xz  -C /
 
-rm -r /tmp/dreamarabia.tar.xz
+apt-get update ; dpkg -i /tmp/*.deb ; apt-get -y -f install
+
+rm -r /tmp/geminilocale_all.deb
 
 wait
 
-wget -q "--no-check-certificate" http://dreambox4u.com/dreamarabia/scripts/installer.sh -O - | /bin/sh
-
-echo "         UPLOADED BY TARK_HANFY    "
-
-
 killall -9 enigma2
 
-exit   c
+sleep 2;
 
-
+exit 0
 
 
