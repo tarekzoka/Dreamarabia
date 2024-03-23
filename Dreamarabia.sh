@@ -9,7 +9,7 @@ rm -r /tmp/geminilocale_all.deb
 
 wait
 
-wget -O /tmp/dreamarabia.tar.xz "https://raw.githubusercontent.com/tarekzoka/Dreamarabia/main/dreamarabia.tar.xz"
+wget -O /tmp/dreamarabia.tar.gz"https://raw.githubusercontent.com/tarekzoka/Dreamarabia/main/dreamarabia.tar.gz"
 
 tar -xzf dreamarabia.tar.xz  -C /
 
