@@ -22,5 +22,3 @@ killall -9 enigma2
 sleep 2;
 
 exit 0
-
-apt-get update ; dpkg -i /tmp/*.deb ; apt-get -y -f install
